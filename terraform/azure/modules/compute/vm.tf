@@ -1,5 +1,5 @@
-resource "azurerm_public_ip" "staticsite-vm-public-ipn" {
-  name                = "staticsite-vm-public-ipn"
+resource "azurerm_public_ip" "public-ip" {
+  name                = "staticsite-vm-public-ip"
   location            = "${var.location}"
   resource_group_name = "${var.rg_name}"
   allocation_method   = "Dynamic"
