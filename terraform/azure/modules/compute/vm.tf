@@ -1,4 +1,4 @@
-resource "azurerm_public_ip" "public-ip" {
+resource "staticsite-vm-public-ipnfjbfg" {
   name                = "staticsite-vm-public-ipnfjbfg"
   location            = "${var.location}"
   resource_group_name = "${var.rg_name}"
