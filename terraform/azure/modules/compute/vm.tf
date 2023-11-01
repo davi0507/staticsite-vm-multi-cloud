@@ -23,7 +23,7 @@ resource "azurerm_network_security_group" "nsg" {
   }
   security_rule {
     name                       = "HTTP"
-    priority                   = 1021
+    priority                   = 1031
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "Tcp"

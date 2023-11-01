@@ -15,12 +15,14 @@ resource "aws_security_group" "sg_public" {
         protocol    = "-1"
         cidr_blocks = ["${var.rede_cidr}"]
     }
-    
-    import {
-        to = aws_security_group_rule.default_egress
-        id = "sg-6777656e646f6c796e_egress_all_0_0_0.0.0.0/0"
+
+    ingress {
+        description = "TLS from VPC"
+        from_port   = 44
+        to_port     = 443
+        protocol    = "tcp"
     }
-    
+
     ingress {
         from_port   = 22
         to_port     = 22
