@@ -85,7 +85,7 @@ jobs:
       uses: azure/login@v1
       with:
         creds: '{"clientId":"${{ secrets.ARM_CLIENT_ID }}","clientSecret":"${{ secrets.ARM_CLIENT_SECRET }}","subscriptionId":"${{ secrets.ARM_SUBSCRIPTION_ID }}","tenantId":"${{ secrets.ARM_TENANT_ID }}"}'
-
+ 
     - name: Step 05 - Terraform Init
       run : terraform -chdir=./terraform/azure init -input=false
 
