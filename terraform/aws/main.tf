@@ -12,3 +12,4 @@ module "compute" {
     ami        = "${var.ami}"
     depends_on = [module.rede]
 }
+
